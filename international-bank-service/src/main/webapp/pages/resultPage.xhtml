@@ -2,6 +2,7 @@
 	xmlns:jsf="http://xmlns.jcp.org/jsf"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
 	template="/WEB-INF/template/template.xhtml">
@@ -21,7 +22,7 @@
 				<h:inputText
 					value="#{loanController.loanResult.capaciteMensuelledeRemboursement}" />
 			</h:panelGrid>
-			<h:commandButton value="return" action="#{loanController.doReturn}"></h:commandButton>
+			<p:commandButton value="return" action="#{loanController.doReturn}"></p:commandButton>
 
 		</h:form>
 

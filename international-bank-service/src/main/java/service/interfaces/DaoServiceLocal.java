@@ -7,6 +7,7 @@ import javax.ejb.Local;
 import domain.Loan;
 import domain.LoanInfo;
 import domain.LoanResult;
+import domain.User;
 
 @Local
 public interface DaoServiceLocal {
@@ -18,6 +19,10 @@ public interface DaoServiceLocal {
 
 	void addLoanResult(LoanResult loanResult);
 
-	LoanResult calculateLoanResult(Loan loan,LoanInfo loanInfo);
+	LoanResult calculateLoanResult(Loan loan, LoanInfo loanInfo);
+
+	User login(String login, String password);
+
+	void addUser(User user);
 
 }

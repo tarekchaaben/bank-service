@@ -8,6 +8,7 @@ import javax.ejb.Startup;
 import domain.CarLoan;
 import domain.LoanInfo;
 import domain.Study;
+import domain.User;
 import service.interfaces.DaoServiceLocal;
 
 /**
@@ -38,6 +39,10 @@ public class DbInitialisator {
 		CarLoan carLoan=new CarLoan("chaabia", 5, 40000D);
 		CarLoan carLoan2=new CarLoan("luxe", 10, 80000D);
 		
+		User user=new User("mohamed", "m", "m");
+		User user2=new User("Samia", "s", "s");
+		User user3=new User("Ali", "a", "a");
+		
 		daoServiceLocal.addLoan(study);
 		daoServiceLocal.addLoan(study2);
 		daoServiceLocal.addLoan(study3);
@@ -47,6 +52,10 @@ public class DbInitialisator {
 
 		daoServiceLocal.addLoanInfo(loanInfo);
 		daoServiceLocal.addLoanInfo(loanInfo2);
+		
+		daoServiceLocal.addUser(user);
+		daoServiceLocal.addUser(user2);
+		daoServiceLocal.addUser(user3);
 
 	}
 
